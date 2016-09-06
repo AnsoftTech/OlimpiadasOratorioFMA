@@ -8,13 +8,13 @@ namespace SistemaSeleccionReina
     public partial class FrmCarga : Form
     {
         WindowsMediaPlayer TamboresSound = new WindowsMediaPlayer();
-        System.Timers.Timer timer = new System.Timers.Timer(4000);
+        System.Timers.Timer timer = new System.Timers.Timer(900);
 
         public FrmCarga()
         {
             InitializeComponent();
             TamboresSound.URL = @"D:\Personal\Proyectos\Angeluz\GitHub\OlimpiadasOratorioFMA\Olimpiadas\SistemaSeleccionReina\Sonidos\tabores.mp3";
-            
+            timer.AutoReset = true;
             timer.Enabled = true;
             timer.Elapsed += Timer_Elapsed;            
         }
@@ -22,7 +22,6 @@ namespace SistemaSeleccionReina
         private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
         {
             TamboresSound.controls.play();
-            timer.Enabled = false;
         }
 
         private void btnSeleccion_Click(object sender, EventArgs e)

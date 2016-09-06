@@ -87,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -102,6 +103,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\52064-Fuegos-Artificiales-Mensajes-Tarjetas-Y-Im-genes-Con-Fuegos-.gif" />
+    <None Include="Resources\patricio-redoble.gif" />
+    <None Include="Resources\tumblr_n4tpjoH5hF1rcqnnxo1_500.gif" />
     <Content Include="Sonidos\aplausos.mp3" />
     <Content Include="Sonidos\tabores.mp3" />
   </ItemGroup>
