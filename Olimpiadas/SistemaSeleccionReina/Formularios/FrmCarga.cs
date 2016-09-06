@@ -1,38 +1,37 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using WMPLib;
 
 namespace SistemaSeleccionReina
 {
     public partial class FrmCarga : Form
     {
+        WindowsMediaPlayer TamboresSound = new WindowsMediaPlayer();
+        System.Timers.Timer timer = new System.Timers.Timer(4000);
+
         public FrmCarga()
         {
             InitializeComponent();
-        }
-
-        private void FrmCarga_Load(object sender, EventArgs e)
-        {
-            tmrTiempo.Interval = 5000;
-            tmrTiempo.Enabled = true;
-            tmrTiempo.Start();
-            tmrTiempo.Tick += TmrTiempo_Tick;
-            prbConteo.Step = 2;
-            prbConteo.Value = 2;
-            prbConteo.Minimum = 1;
-            prbConteo.Maximum = 100;
-        }
-
-        private void TmrTiempo_Tick(object sender, EventArgs e)
-        {
+            TamboresSound.URL = @"D:\Personal\Proyectos\Angeluz\GitHub\OlimpiadasOratorioFMA\Olimpiadas\SistemaSeleccionReina\Sonidos\tabores.mp3";
             
-            prbConteo.PerformStep();
-            if (prbConteo.Maximum.Equals(100))
-            {
-                var form = new FrmGanadora();
-                form.Show();
-                tmrTiempo.Stop();
-                Hide();
-            }
+            timer.Enabled = true;
+            timer.Elapsed += Timer_Elapsed;            
+        }
+
+        private void Timer_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            TamboresSound.controls.play();
+            timer.Enabled = false;
+        }
+
+        private void btnSeleccion_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
+            var form = new FrmGanadora();
+            form.FormClosed += (s, args) => this.Close();
+            form.Show();
+            Hide();
         }
     }
 }

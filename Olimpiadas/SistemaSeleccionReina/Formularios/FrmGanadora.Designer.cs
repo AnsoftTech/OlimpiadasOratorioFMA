@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.pnlFondo = new System.Windows.Forms.Panel();
+            this.btnOtra = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblGanador = new System.Windows.Forms.Label();
-            this.btnOtra = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
             this.pnlFondo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlFondo
             // 
+            this.pnlFondo.Controls.Add(this.btnNuevo);
             this.pnlFondo.Controls.Add(this.btnOtra);
             this.pnlFondo.Controls.Add(this.pictureBox1);
             this.pnlFondo.Controls.Add(this.lblGanador);
@@ -47,11 +49,21 @@
             this.pnlFondo.Size = new System.Drawing.Size(576, 287);
             this.pnlFondo.TabIndex = 0;
             // 
+            // btnOtra
+            // 
+            this.btnOtra.Location = new System.Drawing.Point(503, 3);
+            this.btnOtra.Name = "btnOtra";
+            this.btnOtra.Size = new System.Drawing.Size(73, 40);
+            this.btnOtra.TabIndex = 3;
+            this.btnOtra.Text = "Otra Selección";
+            this.btnOtra.UseVisualStyleBackColor = true;
+            this.btnOtra.Click += new System.EventHandler(this.btnOtra_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(49, 132);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(483, 143);
+            this.pictureBox1.Size = new System.Drawing.Size(440, 143);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -66,15 +78,15 @@
             this.lblGanador.Text = "Ganadora";
             this.lblGanador.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // btnOtra
+            // btnNuevo
             // 
-            this.btnOtra.Location = new System.Drawing.Point(503, 3);
-            this.btnOtra.Name = "btnOtra";
-            this.btnOtra.Size = new System.Drawing.Size(73, 40);
-            this.btnOtra.TabIndex = 3;
-            this.btnOtra.Text = "Otra Selección";
-            this.btnOtra.UseVisualStyleBackColor = true;
-            this.btnOtra.Click += new System.EventHandler(this.btnOtra_Click);
+            this.btnNuevo.Location = new System.Drawing.Point(503, 235);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(73, 40);
+            this.btnNuevo.TabIndex = 3;
+            this.btnNuevo.Text = "Nueva Votación";
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // FrmGanadora
             // 
@@ -98,5 +110,6 @@
         private System.Windows.Forms.Label lblGanador;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnOtra;
+        private System.Windows.Forms.Button btnNuevo;
     }
 }

@@ -28,32 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pnlFondo = new System.Windows.Forms.Panel();
-            this.tmrTiempo = new System.Windows.Forms.Timer(this.components);
-            this.prbConteo = new System.Windows.Forms.ProgressBar();
+            this.btnSeleccion = new System.Windows.Forms.Button();
             this.pnlFondo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFondo
             // 
-            this.pnlFondo.Controls.Add(this.prbConteo);
+            this.pnlFondo.Controls.Add(this.btnSeleccion);
             this.pnlFondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFondo.Location = new System.Drawing.Point(0, 0);
             this.pnlFondo.Name = "pnlFondo";
             this.pnlFondo.Size = new System.Drawing.Size(302, 235);
             this.pnlFondo.TabIndex = 0;
             // 
-            // tmrTiempo
+            // btnSeleccion
             // 
-            this.tmrTiempo.Interval = 1000;
-            // 
-            // prbConteo
-            // 
-            this.prbConteo.Location = new System.Drawing.Point(47, 144);
-            this.prbConteo.Name = "prbConteo";
-            this.prbConteo.Size = new System.Drawing.Size(220, 23);
-            this.prbConteo.TabIndex = 0;
+            this.btnSeleccion.Location = new System.Drawing.Point(215, 28);
+            this.btnSeleccion.Name = "btnSeleccion";
+            this.btnSeleccion.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccion.TabIndex = 0;
+            this.btnSeleccion.Text = "Seleccionar";
+            this.btnSeleccion.UseVisualStyleBackColor = true;
+            this.btnSeleccion.Click += new System.EventHandler(this.btnSeleccion_Click);
             // 
             // FrmCarga
             // 
@@ -64,7 +61,6 @@
             this.Name = "FrmCarga";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seleccionando";
-            this.Load += new System.EventHandler(this.FrmCarga_Load);
             this.pnlFondo.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -73,7 +69,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlFondo;
-        private System.Windows.Forms.Timer tmrTiempo;
-        private System.Windows.Forms.ProgressBar prbConteo;
+        private System.Windows.Forms.Button btnSeleccion;
     }
 }

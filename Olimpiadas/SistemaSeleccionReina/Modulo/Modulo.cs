@@ -4,7 +4,9 @@ namespace SistemaSeleccionReina.Modulo
 {
     public static class Modulo
     {
-        public static List<string> Candidatas= new List<string>();
-        public static int indexGanadora;
+        public static List<string> Candidatas;
+        public static List<int> Eliminados = new List<int>();
+        public static int indexGanadora;    
+        
     }
 }
